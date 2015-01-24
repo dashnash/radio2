@@ -1,0 +1,60 @@
+Client/device
+	• Player
+		○ Audio Player wrapper
+		○ Plays music
+		○ Allows for play/pause
+	• Controller
+		○ Public/Private key auth
+		○ Queries service every X minutes
+		○ Retrieves command to run and notifies player
+		○ Sends ACK post message to service (sound)
+		○ Sends Pause after timeout
+	• Auto-update
+		○ Poll Server for updates
+		○ Pull down package, install, and start
+
+Server
+	• RestFul API
+		○ Private/public key auth
+		○ Iface for client device
+		○ GetCommands
+			§ List of un-acknowledged commands, in order, with GUID
+		○ AckCommand
+			§ Removes all commands up to GUID from command queue
+			§ Normalizes index of remaining commands
+		○ CurrentStation
+			§ ListsCurrent Station & modAe
+		○ Pause
+			§ Pauses current station
+			
+	• JqueryMobile/SqlAlchemy Based WebApp
+		○ User Iface
+			§ Displays Current Playing song/station/last station
+			§ Play/pause
+			§ List of Stations to select
+		○ Admin
+			§ Add new stations
+			§ View User Metrics
+			§ Add/Manage new devices (max 2)	
+			§ Publish new client software version
+	• Models
+		○ Command
+			§ GUID
+			§ INDEX
+			§ Op to run on Client Device
+			§ SourceID
+		○ Station
+			§ Command to run
+			§ Command to stop/pause
+			§ Command to skip
+			§ Command to pause (if running)
+			§ Image
+		○ Users
+			§ Based on device_id (learn about http headers)
+			§ Generate Funny Name
+				□ (list of adjectives + list of mammals)
+			§ List of commands
+		○ Clients
+			§ Version #
+			§ Path to compressed src to install
+
