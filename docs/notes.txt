@@ -23,14 +23,14 @@ Server
 			§ Removes all commands up to GUID from command queue
 			§ Normalizes index of remaining commands
 		○ CurrentStation
-			§ ListsCurrent Station & modAe
+			§ ListsCurrent Station & mode
 		○ Pause
 			§ Pauses current station
 			
 	• JqueryMobile/SqlAlchemy Based WebApp
 		○ User Iface
 			§ Displays Current Playing song/station/last station
-			§ Play/pause
+			§ Play/pause/skip (if available)
 			§ List of Stations to select
 		○ Admin
 			§ Add new stations
@@ -39,10 +39,10 @@ Server
 			§ Publish new client software version
 	• Models
 		○ Command
-			§ GUID
 			§ INDEX
 			§ Op to run on Client Device
 			§ SourceID
+			* DeviceID
 		○ Station
 			§ Command to run
 			§ Command to stop/pause
@@ -54,7 +54,10 @@ Server
 			§ Generate Funny Name
 				□ (list of adjectives + list of mammals)
 			§ List of commands
-		○ Clients
+		* Devices
+		  * id
+		  * name
+		* Clients
 			§ Version #
 			§ Path to compressed src to install
 

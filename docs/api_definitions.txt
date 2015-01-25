@@ -1,0 +1,28 @@
+REST API
+
+GetCommands(deviceId):
+    Returns list of un-acknowledged commands, sorted by order field
+
+AckCommands(deviceId, commandIds):
+    SendsList of completed commands
+
+ResetDevice(deviceId):
+    Puts device into reset mode
+    
+RegisterDevice(deviceId):
+    Ack message on restart (or start).  Clears any existing messages in the queue for that device.
+
+NowPlaying(deviceId):
+    returns currently playing station (if any) and mode
+
+
+UI pages functionality
+
+Now Playing(deviceId)
+    shows image of current song/station & controls
+
+Send Command(deviceId, commandSpec)
+    Adds command to the queue
+
+Show Stations():
+    Returns list of stations
