@@ -98,3 +98,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Liclipse
+*.project
+*.pydevproject
