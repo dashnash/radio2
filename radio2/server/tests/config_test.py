@@ -7,7 +7,7 @@ import unittest
 
 from radio2.server.core.config import Config, CONFIG_KEYS
 
-test_config_path = 'configs/dev_rds.json'
+test_config_path = 'configs/sample_config.json'
 
 class Test(unittest.TestCase):
 

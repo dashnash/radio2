@@ -3,15 +3,16 @@ Created on Jan 24, 2015
 
 @author: dnash
 '''
-from sqlalchemy.ext.declarative import declarative_base
+
 from sqlalchemy import Column, Integer, String
-Base = declarative_base(
-                        )
+from radio2.server.core import Base
+
 class Device(Base):
     '''
     Stores device information
     '''
-    __tablename__ = 'users'
+    __tablename__ = 'devices'
     
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String(50))
+    test_field = Column(Integer)
