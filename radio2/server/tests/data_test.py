@@ -6,8 +6,8 @@ Created on Jan 25, 2015
 import unittest
 from radio2.server.core import connect
 
-from radio2.server.core import Base, Session
-from radio2.server.models.Device import Device
+from radio2.server.data import Base, Session
+from radio2.server.core.models import Device
 
 test_config_path = 'configs/unittests.json'
 

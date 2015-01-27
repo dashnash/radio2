@@ -4,7 +4,7 @@ Created on Jan 25, 2015
 @author: dashnash
 '''
 import unittest
-from radio2.server.core import Session
+from radio2.server.data import Session
 from radio2.server.core import connect
 
 test_config_path = 'configs/local_mysql.json'
