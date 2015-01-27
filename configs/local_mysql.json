@@ -1,0 +1,3 @@
+{
+    "CONNECT_STRING": "mysql+mysqldb://root:@localhost:3306/radio2_dev"
+}
